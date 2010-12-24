@@ -1,6 +1,7 @@
 //Created By Michael Johnston <michael.johnston29@gmail.com>
 //24.12.2010
 
+//P.S. All comments for the interface are in linkList.h
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -58,8 +59,6 @@ void removeLink (int index, Node list){
 	assert (list != NULL);
 	int i = 0;
 	while (i < index - 1){
-		//Will keep going though links till it gets to the link
-		//before the one i want to remove
 		assert (list->next != NULL);
 		list = list->next;
 	}
@@ -67,8 +66,6 @@ void removeLink (int index, Node list){
 	list->next = list->next->next;
 }
 
-//Will return the index for the value if it is in the list
-// Otherwise it will return -1 if it is not in the list.
 int whereInList(int value, Node list){
 	assert(inList(value, list));
 
