@@ -32,8 +32,8 @@ void removeLink (int index, Node list);
 // Will return False if it is not in the list.
 int inList (int value, Node list);
 
-//This function should only be called after an inList() call
-//Will throw an assertion error if value not in list.
+// Returns the index location of a particular integer
+// Starting from 0. It Will return -1 if not found.
 int whereInList (int value, Node list);
 
 
