@@ -67,11 +67,12 @@ void removeLink (int index, Node list){
 }
 
 int whereInList(int value, Node list){
-	assert(inList(value, list));
-
 	int i = 0;
 	while (list->value != value){
-		assert (list->next != NULL);		
+		if (list->next == NULL){
+			//The int is not in the list
+			return -1;
+		}		
 		i ++;
 		list = list->next;
 	}
